@@ -1,0 +1,4 @@
+# you venv here
+hangman-venv
+db.sqlite3
+__pycache__
