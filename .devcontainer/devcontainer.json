@@ -1,0 +1,26 @@
+{
+    "name": "Python 3 & Django",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.black-formatter",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "batisteo.vscode-django",
+        "ms-azuretools.vscode-docker"
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root",
+        "portsAttributes": {
+        "8000": {
+            "label": "Django",
+            "onAutoForward": "notify"
+        }
+    },
+    "forwardPorts": [8000]
+}
