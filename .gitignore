@@ -1,4 +1,4 @@
 # you venv here
-hangman-venv
+VenvHangMan
 db.sqlite3
 __pycache__

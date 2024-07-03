@@ -1,5 +1,5 @@
 {
-    "name": "Python 3 & Django",
+    "name": "Hang Man",
     "build": {
         "dockerfile": "../Dockerfile"
     },
@@ -14,7 +14,7 @@
         "batisteo.vscode-django",
         "ms-azuretools.vscode-docker"
     ],
-    "postCreateCommand": "pip install -r requirements.txt",
+    "postCreateCommand": "python3 -m venv VenvHangMan && . VenvHangMan/bin/activate && pip install -r requirements.txt && python3 manage.py migrate",
     "remoteUser": "root",
         "portsAttributes": {
         "8000": {
