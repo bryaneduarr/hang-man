@@ -6,7 +6,7 @@ password
 ```
 Activar el entorno virtual.
 ```
-source nombre-aquí/bin/activate
+source VENV/bin/activate
 ```
 **Correr el servidor local.**
 ```
