@@ -5,17 +5,18 @@
 {% block body %}
 {% if user.is_authenticated %}
 <div>
-  <div>
+  <div class="user-container">
     <p>Bienvenido, {{ user.username }}.</p>
     <form action="{% url 'logout' %}" method="post">
       {% csrf_token %}
       <button type="submit">Cerrar sesión</button>
     </form>
+    <button class="stats-button">Estadisticas</button>
   </div>
   <div class="container-game">
     <div class="hangman-box">
       <img src="{% static 'images/hangman-0.svg' %}" draggable="false" alt="hang-man img" />
-      <h1>Hangman</h1>
+      <h1>Hangman GRUPO 1</h1>
     </div>
     <div class="game-box">
       <ul class="word-display"></ul>
@@ -24,11 +25,27 @@
       <div class="keyboard"></div>
     </div>
   </div>
+  <div class="dificultad-container">
+    <h4 class="dificultad">Dificultad</h4>
+    <div class="button-dificultad-container">
+      <button class="button-dificultad easy">Facil</button>
+      <button class="button-dificultad medium">Intermedio</button>
+      <button class="button-dificultad hard">Dificil</button>
+    </div>
+  </div>
   <div class="game-modal">
     <div class="content">
       <h4>Fin del juego</h4>
       <p class="victory-game">La palabra correcta es: <b>palabra</b></p>
       <button class="play-again">Jugar de nuevo</button>
+    </div>
+  </div>
+  <div class="stats-modal">
+    <div class="content">
+      <h4 class="victory-count">Cantidad de veces ganadas: <b></b></h4>
+      <h4>Palabras adivinadas</h4>
+      <span class="victory-words"></span>
+      <button class="salir-stats-modal">Salir</button>
     </div>
   </div>
 </div>

@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "hangman",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
