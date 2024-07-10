@@ -23,3 +23,5 @@ RUN pip3 install -r requirements.txt
 RUN chown -R vscode:vscode /workspace
 
 USER vscode
+
+COPY python_createsuperuser.py /workspace/python_createsuperuser.py

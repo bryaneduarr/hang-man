@@ -1,4 +1,4 @@
-## Setup Para Desarrollo Local
+## Setup Para Desarrollo Local Y Ejecucion
 
 Contraseña para **super usuario**.
 ```
@@ -12,3 +12,12 @@ source VENV/bin/activate
 ```
 python3 manage.py runserver 0.0.0.0:8000
 ```
+## Usuarios
+Para poder acceder al panel de **/admin** utilizar las siguientes credenciales.
+```
+root
+```
+```
+password
+```
+Estas credenciales tambien sirven para **iniciar sesion** en **/login**.

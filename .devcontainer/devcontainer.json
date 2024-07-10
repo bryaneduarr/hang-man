@@ -12,9 +12,11 @@
         "ms-python.python",
         "ms-python.debugpy",
         "batisteo.vscode-django",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "bibhasdn.django-html",
+        "esbenp.prettier-vscode"
     ],
-    "postCreateCommand": "python3 -m venv VENV && . VENV/bin/activate && pip install -r requirements.txt && python3 manage.py migrate",
+    "postCreateCommand": "python3 -m venv VENV && . VENV/bin/activate && pip install -r requirements.txt && python3 manage.py migrate && python3 python_createsuperuser.py",
     "remoteUser": "root",
         "portsAttributes": {
         "8000": {

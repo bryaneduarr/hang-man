@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<div>
+  <div>
+    <p>Bienvenido, {{ user.username }}.</p>
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Cerrar sesión</button>
+    </form>
+  </div>
+  <div class="container-game">
+    <div class="hangman-box">
+      <img src="{% static 'images/hangman-0.svg' %}" draggable="false" alt="hang-man img" />
+      <h1>Hangman</h1>
+    </div>
+    <div class="game-box">
+      <ul class="word-display"></ul>
+      <h4 class="hint-text">Pista: <b></b></h4>
+      <h4 class="guesses-text">Palabras incorrectas: <b></b></h4>
+      <div class="keyboard"></div>
+    </div>
+  </div>
+  <div class="game-modal">
+    <div class="content">
+      <h4>Fin del juego</h4>
+      <p class="victory-game">La palabra correcta es: <b>palabra</b></p>
+      <button class="play-again">Jugar de nuevo</button>
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/script.js' %}" defer></script>
+{% else %}
+<p>Porfavor inicie sesion</p>
+<p><a href="{% url 'login' %}">Login </a> o <a href="{% url 'register' %}">Registrarse</a></P>
+{% endif %}
+
+{% endblock %}
