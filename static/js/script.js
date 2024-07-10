@@ -45,11 +45,11 @@ const wordList = [
     hint: "Sustancia líquida vital para la vida.",
   },
   {
-    word: "fútbol",
+    word: "futbol",
     hint: "Deporte jugado con una pelota.",
   },
   {
-    word: "avión",
+    word: "avion",
     hint: "Medio de transporte aéreo.",
   },
   {
@@ -57,11 +57,7 @@ const wordList = [
     hint: "Dispositivo electrónico para procesar información.",
   },
   {
-    word: "montaña",
-    hint: "Gran elevación natural de la tierra.",
-  },
-  {
-    word: "teléfono",
+    word: "telefono",
     hint: "Dispositivo para comunicarse a distancia.",
   },
   {
@@ -69,7 +65,7 @@ const wordList = [
     hint: "Área urbana densamente poblada.",
   },
   {
-    word: "camión",
+    word: "camion",
     hint: "Vehículo de transporte de carga.",
   },
   {
